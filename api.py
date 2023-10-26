@@ -27,3 +27,13 @@ def example_2(inputs:Inputs) -> float:
 if __name__ == "__main__":
     uvicorn.run(app, port=8000)
 
+# Configurações do seu banco de dados
+# Caminho para o arquivo .csv que você deseja atualizar
+#file_path = 'C:\\Users\\Israel Silva\\Downloads\\engSoftw-TestesAPI\\arquivos_base\\turma.csv'
+
+# Nome da tabela que você deseja exportar/importar do banco de dados
+#table_name = 'turma'
+
+# Chamar a função
+#bd.update_csv_from_database(file_path, table_name)
+#bd.update_database_from_csv(file_path, table_name)

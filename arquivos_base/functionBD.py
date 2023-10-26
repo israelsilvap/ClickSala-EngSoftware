@@ -1,4 +1,6 @@
 import mysql.connector
+import pandas as pd
+import numpy as np
 
 def get_db_connection():
     conexao = mysql.connector.connect(
@@ -8,6 +10,48 @@ def get_db_connection():
         database= 'bd_salas'
     )
     return conexao
+
+# Função para atualizar o banco de dados a partir de um arquivo
+def update_database_from_csv(file_path, table_name):
+    # Ler os dados do arquivo .csv
+    data = pd.read_csv(file_path, header=None)
+
+    # Conectar ao banco de dados
+    conexao = get_db_connection()
+    cursor = conexao.cursor()
+
+    # Limpar a tabela existente
+    cursor.execute(f"TRUNCATE TABLE {table_name}")
+
+    # Inserir os novos dados na tabela
+    for i, row in data.iterrows():
+        values = ', '.join([f'"{item}"' if pd.notnull(item) else 'NULL' for item in row])
+        sql = f"INSERT INTO {table_name} VALUES ({values})"
+        cursor.execute(sql)
+
+    # Commit das alterações e fechar a conexão
+    conexao.commit()
+    cursor.close()
+    conexao.close()
+
+
+# Função para atualizar o arquivo a partir do banco de dados
+def update_csv_from_database(file_path, table_name):
+    # Conectar ao banco de dados
+    conexao = get_db_connection()
+    cursor = conexao.cursor()
+
+    # Executar a consulta para obter todos os dados da tabela
+    cursor.execute(f"SELECT * FROM {table_name}")
+
+    # Escrever os resultados no arquivo .csv
+    with open(file_path, 'w') as f:
+        for row in cursor:
+            f.write(','.join([str(item) for item in row]) + '\n')
+
+    # Fechar a conexão
+    cursor.close()
+    conexao.close()
 
 def create_sala(CAPACIDADE):
     conexao = get_db_connection()
