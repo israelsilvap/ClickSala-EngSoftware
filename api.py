@@ -29,11 +29,11 @@ if __name__ == "__main__":
 
 # Configurações do seu banco de dados
 # Caminho para o arquivo .csv que você deseja atualizar
-#file_path = 'C:\\Users\\Israel Silva\\Downloads\\engSoftw-TestesAPI\\arquivos_base\\turma.csv'
+file_path = 'C:\\Users\\Israel Silva\\Downloads\\engSoftw-TestesAPI\\arquivos_base\\agenda.csv'
 
 # Nome da tabela que você deseja exportar/importar do banco de dados
-#table_name = 'turma'
+table_name = 'agenda'
 
 # Chamar a função
-#bd.update_csv_from_database(file_path, table_name)
+bd.update_csv_from_database(file_path, table_name)
 #bd.update_database_from_csv(file_path, table_name)
