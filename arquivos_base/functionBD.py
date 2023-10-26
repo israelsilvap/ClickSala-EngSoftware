@@ -77,8 +77,6 @@ def remove_disciplina(idDISCIPLINA):
     cursor.close()
     conexao.close()
 
-
-
 def create_turma(idDISCIPLINA, QUANT_ALUNOS):
     conexao = get_db_connection()
     cursor = conexao.cursor()
@@ -100,7 +98,6 @@ def remove_turma(idTURMA):
 
     cursor.close()
     conexao.close()
-
 
 def update_sala(idSALA, DIA,idAGENDA):
     conexao = get_db_connection()
