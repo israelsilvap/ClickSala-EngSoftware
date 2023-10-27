@@ -34,7 +34,6 @@ def update_database_from_csv(file_path, table_name):
     cursor.close()
     conexao.close()
 
-
 # Função para atualizar o arquivo a partir do banco de dados
 def update_csv_from_database(file_path, table_name):
     # Conectar ao banco de dados
@@ -53,17 +52,18 @@ def update_csv_from_database(file_path, table_name):
     cursor.close()
     conexao.close()
 
-def create_sala(CAPACIDADE):
+def create_sala(idSALA, CAPACIDADE):
     conexao = get_db_connection()
     cursor = conexao.cursor()
 
-    command = f'INSERT INTO sala (CAPACIDADE) VALUES ({CAPACIDADE})'
+    command = f'INSERT INTO sala (idSALA, CAPACIDADE) VALUES ({idSALA},{CAPACIDADE})'
     cursor.execute(command)
     conexao.commit()
-
+    
     cursor.close()
     conexao.close()
-
+    update_csv_from_database('C:\\Users\\Israel Silva\\Downloads\\engSoftw-TestesAPI\\arquivos_base\\sala.csv', 'sala')
+    
 def remove_sala(idSALA):
     conexao = get_db_connection()
     cursor = conexao.cursor()
@@ -71,17 +71,31 @@ def remove_sala(idSALA):
     command = f'DELETE FROM sala WHERE idSALA = {idSALA}'
     cursor.execute(command)
     conexao.commit()
-
+    update_csv_from_database('C:\\Users\\Israel Silva\\Downloads\\engSoftw-TestesAPI\\arquivos_base\\sala.csv', 'sala')
+    
     cursor.close()
     conexao.close()
 
-def create_agenda(PHR, SHR, THR, QHR):
+def update_sala(idSALA, CAPACIDADE):
     conexao = get_db_connection()
     cursor = conexao.cursor()
 
-    command = f'INSERT INTO agenda (PHR, SHR, THR, QHR) VALUES ({PHR}, {SHR}, {THR}, {QHR})'
+    command = f'UPDATE sala SET CAPACIDADE = {CAPACIDADE} WHERE idSALA = {idSALA}'
     cursor.execute(command)
     conexao.commit()
+    update_csv_from_database('C:\\Users\\Israel Silva\\Downloads\\engSoftw-TestesAPI\\arquivos_base\\sala.csv', 'sala')
+    
+    cursor.close()
+    conexao.close()
+
+def create_agenda(idSALA, idTURMA, DIA_DA_SEMANA, HORARIO):
+    conexao = get_db_connection()
+    cursor = conexao.cursor()
+
+    command = f'INSERT INTO agenda (idSALA, idTURMA, DIA_DA_SEMANA, HORARIO) VALUES ({idSALA}, {idTURMA}, {DIA_DA_SEMANA}, {HORARIO})'
+    cursor.execute(command)
+    conexao.commit()
+    update_csv_from_database('C:\\Users\\Israel Silva\\Downloads\\engSoftw-TestesAPI\\arquivos_base\\agenda.csv', 'agenda')
 
     cursor.close()
     conexao.close()
@@ -93,17 +107,19 @@ def remove_agenda(idAGENDA):
     command = f'DELETE FROM agenda WHERE idAGENDA = {idAGENDA}'
     cursor.execute(command)
     conexao.commit()
+    update_csv_from_database('C:\\Users\\Israel Silva\\Downloads\\engSoftw-TestesAPI\\arquivos_base\\agenda.csv', 'agenda')
 
     cursor.close()
     conexao.close()
 
-def create_disciplina(PERIODO, CH, NOME, CARATER, TIPO):
+def create_disciplina(idDISCIPLINA, PERIODO, CH, NOME, CARATER, TIPO):
     conexao = get_db_connection()
     cursor = conexao.cursor()
 
-    command = f'INSERT INTO disciplina (PERIODO, CH, NOME, CARATER, TIPO) VALUES ({PERIODO}, {CH}, "{NOME}", "{CARATER}", "{TIPO}")'
+    command = f'INSERT INTO disciplina (idDISCIPLINA, PERIODO, CH, NOME, CARATER, TIPO) VALUES ({idDISCIPLINA}, {PERIODO}, {CH}, "{NOME}", "{CARATER}", "{TIPO}")'
     cursor.execute(command)
     conexao.commit()
+    update_csv_from_database('C:\\Users\\Israel Silva\\Downloads\\engSoftw-TestesAPI\\arquivos_base\\disciplina.csv', 'disciplina')
 
     cursor.close()
     conexao.close()
@@ -117,17 +133,19 @@ def remove_disciplina(idDISCIPLINA):
     
     cursor.execute(command)
     conexao.commit()
+    update_csv_from_database('C:\\Users\\Israel Silva\\Downloads\\engSoftw-TestesAPI\\arquivos_base\\disciplina.csv', 'disciplina')
 
     cursor.close()
     conexao.close()
 
-def create_turma(idDISCIPLINA, QUANT_ALUNOS):
+def create_turma(idTURMA, idDISCIPLINA, QUANT_ALUNOS):
     conexao = get_db_connection()
     cursor = conexao.cursor()
 
-    command = f'INSERT INTO turma (idDISCIPLINA, QUANT_ALUNOS) VALUES ({idDISCIPLINA}, {QUANT_ALUNOS})'
+    command = f'INSERT INTO turma (idTURMA, idDISCIPLINA, QUANT_ALUNOS) VALUES ({idTURMA}, {idDISCIPLINA}, {QUANT_ALUNOS})'
     cursor.execute(command)
     conexao.commit()
+    update_csv_from_database('C:\\Users\\Israel Silva\\Downloads\\engSoftw-TestesAPI\\arquivos_base\\turma.csv', 'turma')
 
     cursor.close()
     conexao.close()
@@ -139,17 +157,7 @@ def remove_turma(idTURMA):
     command = f'DELETE FROM turma WHERE idTURMA = {idTURMA}'
     cursor.execute(command)
     conexao.commit()
-
-    cursor.close()
-    conexao.close()
-
-def update_sala(idSALA, DIA,idAGENDA):
-    conexao = get_db_connection()
-    cursor = conexao.cursor()
-
-    command = f'UPDATE sala SET ({DIA}) = ({idAGENDA}) WHERE idSALA = {idSALA}'
-    cursor.execute(command)
-    conexao.commit()
+    update_csv_from_database('C:\\Users\\Israel Silva\\Downloads\\engSoftw-TestesAPI\\arquivos_base\\turma.csv', 'turma')
 
     cursor.close()
     conexao.close()

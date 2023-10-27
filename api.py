@@ -14,7 +14,7 @@ class Inputs(BaseModel):
 # Rotas testes
 @app.get('/exemplo')
 def example() -> str:
-    bd.create_sala(45)
+    bd.create_sala(2, 45)
 
     return "Sala adicionada!"
 
@@ -29,11 +29,11 @@ if __name__ == "__main__":
 
 # Configurações do seu banco de dados
 # Caminho para o arquivo .csv que você deseja atualizar
-file_path = 'C:\\Users\\Israel Silva\\Downloads\\engSoftw-TestesAPI\\arquivos_base\\agenda.csv'
+#file_path = '\\arquivos_base\\agenda.csv'
 
 # Nome da tabela que você deseja exportar/importar do banco de dados
-table_name = 'agenda'
+#table_name = 'agenda'
 
 # Chamar a função
-bd.update_csv_from_database(file_path, table_name)
+#bd.update_csv_from_database(file_path, table_name)
 #bd.update_database_from_csv(file_path, table_name)
