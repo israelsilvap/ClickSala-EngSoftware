@@ -21,7 +21,9 @@ def update_database_from_csv(file_path, table_name):
     cursor = conexao.cursor()
 
     # Limpar a tabela existente
+    cursor.execute("SET FOREIGN_KEY_CHECKS=0")
     cursor.execute(f"TRUNCATE TABLE {table_name}")
+    cursor.execute("SET FOREIGN_KEY_CHECKS=1")
 
     # Inserir os novos dados na tabela
     for i, row in data.iterrows():
