@@ -7,20 +7,15 @@ INSERT INTO Docente (ID_Docente, Nome_Docente) VALUES
 (5, 'Prof. Beatriz');
 
 -- Povoando a tabela Dias_Aula_Docente
-INSERT INTO Dias_Aula_Docente (ID_Dias_Aula, ID_Docente, Dias_Aula) VALUES 
-(1, 1, 'segunda,quarta,sexta'), 
-(2, 2, 'terca,quinta'),
-(3, 3, 'segunda,quarta'),
-(4, 4, 'terca,quinta'),
-(5, 5, 'segunda,sexta');
+INSERT INTO Dias_Aula_Docente (ID_Docente, Dias_Aula, Horarios_Aula) VALUES 
+(1, 'segunda', '08h00_10h00,10h00_12h00'),
+(1, 'quarta', '13h30_15h30,15h30_17h30'),
+(1, 'quinta', '08h00_10h00,10h00_12h00'),
+(2, 'segunda', '13h30_15h30,15h30_17h30'),
+(2, 'terca', '08h00_10h00,10h00_12h00'),
+(2, 'sexta', '08h00_10h00,10h00_12h00');
 
--- Povoando a tabela Horarios_Aulas_Docente
-INSERT INTO Horarios_Aulas_Docente (ID_Horarios_Aulas, ID_Docente, Horarios_Aula) VALUES 
-(1, 1, '08h00_10h00,10h00_12h00'), 
-(2, 2, '13h30_15h30,15h30_17h30'),
-(3, 3, '08h00_10h00,10h00_12h00'),
-(4, 4, '13h30_15h30,15h30_17h30'),
-(5, 5, '08h00_10h00,10h00_12h00');
+
 
 -- Povoando a tabela Disciplina
 INSERT INTO Disciplina (ID_Disciplina, Nome_Disciplina, Tipo, Periodo) VALUES 
@@ -36,17 +31,17 @@ INSERT INTO Disciplina (ID_Disciplina, Nome_Disciplina, Tipo, Periodo) VALUES
 (10, 'Artes', 'optativa', 2);
 
 -- Inserindo turmas
-INSERT INTO Turma (ID_Turma, ID_Disciplina, ID_Docente, Num_Alunos, Dias_Aula, Horario_Aulas) VALUES 
-(1, 1, 1, 30, 'segunda,quarta', '08h00_10h00'),
-(2, 2, 1, 30, 'sexta', '10h00_12h00'),
-(3, 3, 2, 30, 'terca', '13h30_15h30'),
-(4, 4, 2, 30, 'quinta', '15h30_17h30'),
-(5, 5, 3, 30, 'segunda', '08h00_10h00'),
-(6, 6, 3, 30, 'quarta', '10h00_12h00'),
-(7, 7, 4, 30, 'terca', '13h30_15h30'),
-(8, 8, 4, 30, 'quinta', '15h30_17h30'),
-(9, 9, 5, 30, 'segunda', '08h00_10h00'),
-(10, 10, 5, 30, 'sexta', '10h00_12h00');
+INSERT INTO Turma (ID_Disciplina, ID_Docente, Num_Alunos, Dias_Aula, Horario_Aulas) VALUES 
+(1, 1, 30, 'segunda,quarta', '08h00_10h00'),
+(2, 1, 30, 'sexta', '10h00_12h00'),
+(3, 2, 30, 'terca', '13h30_15h30'),
+(4, 2, 30, 'quinta', '15h30_17h30'),
+(5, 3, 30, 'segunda', '08h00_10h00'),
+(6, 3, 30, 'quarta', '10h00_12h00'),
+(7, 4, 30, 'terca', '13h30_15h30'),
+(8, 4, 30, 'quinta', '15h30_17h30'),
+(9, 5, 30, 'segunda', '08h00_10h00'),
+(10, 5, 30, 'sexta', '10h00_12h00');
 
 -- Inserindo salas
 CALL CreateSala('Sala 101', 30);

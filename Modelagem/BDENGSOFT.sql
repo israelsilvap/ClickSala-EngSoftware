@@ -5,8 +5,9 @@ DROP TABLE IF EXISTS Sala;
 DROP TABLE IF EXISTS Agenda;
 DROP TABLE IF EXISTS Horarios;
 DROP TABLE IF EXISTS Turma;
-DROP TABLE IF EXISTS Dias_Aula_Docente;
 DROP TABLE IF EXISTS Horarios_Aulas_Docente;
+DROP TABLE IF EXISTS Dias_Aula_Docente;
+
 DROP TABLE IF EXISTS Disciplina;
 DROP TABLE IF EXISTS Docente;
 DROP FUNCTION IF EXISTS GetTurmaSuffix;
@@ -19,20 +20,13 @@ CREATE TABLE Docente (
 );
 
 CREATE TABLE Dias_Aula_Docente (
-    ID_Dias_Aula INT,
     ID_Docente INT,
-    Dias_Aula SET('segunda', 'terca', 'quarta', 'quinta', 'sexta'),
-    PRIMARY KEY (ID_Dias_Aula),
-    FOREIGN KEY (ID_Docente) REFERENCES Docente(ID_Docente)
-);
--- mexi nos horarios, mudei o padrao APENAS
-CREATE TABLE Horarios_Aulas_Docente (
-    ID_Horarios_Aulas INT,
-    ID_Docente INT,
+    Dias_Aula ENUM('segunda', 'terca', 'quarta', 'quinta', 'sexta'),
     Horarios_Aula SET('08h00_10h00', '10h00_12h00', '13h30_15h30', '15h30_17h30'),
-    PRIMARY KEY (ID_Horarios_Aulas),
+    PRIMARY KEY (ID_Docente, Dias_Aula),
     FOREIGN KEY (ID_Docente) REFERENCES Docente(ID_Docente)
 );
+
 
 CREATE TABLE Disciplina (
     ID_Disciplina INT,
@@ -43,15 +37,13 @@ CREATE TABLE Disciplina (
 );
 
 CREATE TABLE Turma (
-    ID_Turma INT,
     Nome_Turma VARCHAR(255),
     ID_Disciplina INT,
     ID_Docente INT,    
     Num_Alunos INT,
     Dias_Aula SET('segunda', 'terca', 'quarta', 'quinta', 'sexta'),
     Horario_Aulas SET('08h00_10h00', '10h00_12h00', '13h30_15h30', '15h30_17h30'),
-    PRIMARY KEY (ID_Turma),
-    UNIQUE (Nome_Turma),
+    PRIMARY KEY (Nome_Turma, ID_Disciplina),
     FOREIGN KEY (ID_Disciplina) REFERENCES Disciplina(ID_Disciplina),
     FOREIGN KEY (ID_Docente) REFERENCES Docente(ID_Docente)
 );
