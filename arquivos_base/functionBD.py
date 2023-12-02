@@ -4,10 +4,10 @@ import numpy as np
 
 def get_db_connection():
     conexao = mysql.connector.connect(
-        host='localhost',
-        user='root',
-        password= '5991',
-        database= 'bd_salas'
+        host='db4free.net',
+        user='dnilson',
+        password= 'mat495986',
+        database= 'bdmat495986'
     )
     return conexao
 

@@ -13,8 +13,8 @@ DROP FUNCTION IF EXISTS GetTurmaSuffix;
 
 
 CREATE TABLE Docente (
-    ID_Docente INT,
-    Nome_Docente VARCHAR(255),
+    ID_Docente INT NOT NULL AUTO_INCREMENT,
+    Nome_Docente VARCHAR(255) UNIQUE,
     PRIMARY KEY (ID_Docente)
 );
 
