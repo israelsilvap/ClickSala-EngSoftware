@@ -1,0 +1,137 @@
+main {
+  width: 100%;
+}
+
+.wrapper {
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 19.5rem 1fr;
+
+  align-items: flex-start;
+}
+
+.containerGlobal {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.containerTop {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5.5rem;
+}
+
+.vetordiv {
+  padding: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.vetordiv img {
+  height: 37.1rem;
+}
+
+.areacoord {
+  padding: 1rem;
+  margin-left: 2rem;
+}
+
+.areacoord h1 {
+  font-family: "Nunito", sans-serif;
+  color: var(--gray-800);
+  font-weight: 400;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -3rem;
+  text-align: center;
+}
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -3.5rem;
+  margin-top: -0.5rem;
+  text-align: center;
+}
+
+.containerBd {
+  padding: 1.5rem;
+  margin-top: -0.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.btnVoltar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  margin: 5px;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  border: 0cap;
+  background: var(--blue-500);
+  transition: all 0.5s ease;
+  color: var(--white);
+  padding: 0.5rem;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.btnVoltar:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.iconVoltar {
+  height: 1rem;
+  margin: 5px;
+}
+
+.containerBd2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -3rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 3 - 150px);
+  height: 19rem;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  background-color: var(--white);
+  transition: all 0.5s ease;
+}
+
+.cardIcon {
+  width: 35%;
+  height: auto;
+  padding: 0.5rem;
+}
