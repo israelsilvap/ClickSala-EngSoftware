@@ -1,0 +1,31 @@
+.buttonCalendar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  margin: 10px;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  background: var(--blue-500);
+  transition: all 0.5s ease;
+}
+
+.buttonCalendar:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.buttonCalendar p {
+  color: var(--white);
+  padding: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.iconCalendar {
+  height: 1.5rem;
+}
