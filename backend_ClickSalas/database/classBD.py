@@ -61,6 +61,7 @@ class BancoDeDados:
         try:
             self.cursor.execute(comando)
             self.conexao.commit()
+            self.cursor.close()
             return True
         except Exception as e:
             self.cursor.close()
@@ -79,6 +80,7 @@ class BancoDeDados:
         try:
             self.cursor.execute(comando)
             self.conexao.commit()
+            self.cursor.close()
             return True
         except Exception as e:
             self.cursor.close()
@@ -88,17 +90,27 @@ class BancoDeDados:
         self.Nome_Disciplina = Nome_Disciplina
         self.cursor = self.conexao.cursor()
         comando = f"SELECT ID_Disciplina FROM Disciplina WHERE Nome_Disciplina = '{self.Nome_Disciplina}'"
-        self.cursor.execute(comando)
-        self.ID_Disciplina = self.cursor.fetchall()[0][0]
-        self.cursor.close()
-        return self.ID_Disciplina
+        try:
+            self.cursor.execute(comando)
+            self.ID_Disciplina = self.cursor.fetchall()[0][0]
+            self.cursor.close()
+            return self.ID_Disciplina
+        except Exception as e:
+            self.cursor.close()
+            return False
+
     
     def get_ID_Docente(self, Nome_Docente):
         self.Nome_Docente = Nome_Docente
         self.cursor = self.conexao.cursor()
         comando = f"SELECT ID_Docente FROM Docente WHERE Nome_Docente = '{self.Nome_Docente}'"
-        self.cursor.execute(comando)
-        self.ID_Docente = self.cursor.fetchall()[0][0]
-        self.cursor.close()
-        return self.ID_Docente
+        try:
+            self.cursor.execute(comando)
+            self.ID_Docente = self.cursor.fetchall()[0][0]
+            self.cursor.close()
+            return self.ID_Docente
+        except Exception as e:
+            self.cursor.close()
+            return False
+
 
