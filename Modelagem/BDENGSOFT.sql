@@ -27,10 +27,9 @@ CREATE TABLE Dias_Aula_Docente (
     FOREIGN KEY (ID_Docente) REFERENCES Docente(ID_Docente)
 );
 
-
 CREATE TABLE Disciplina (
-    ID_Disciplina INT,
-    Nome_Disciplina VARCHAR(255),
+    ID_Disciplina INT AUTO_INCREMENT,
+    Nome_Disciplina VARCHAR(255) UNIQUE,
     Tipo ENUM('obrigatoria', 'optativa'),
     Periodo INT,
     PRIMARY KEY (ID_Disciplina)
@@ -84,7 +83,7 @@ CREATE TABLE Agenda (
 CREATE TABLE Sala (
     ID_Sala INT AUTO_INCREMENT,
     ID_Agenda INT,
-    Nome VARCHAR(255),
+    Nome VARCHAR(255) UNIQUE,
     Capacidade INT,
     PRIMARY KEY (ID_Sala),
     FOREIGN KEY (ID_Agenda) REFERENCES Agenda(ID_Agenda)
@@ -170,4 +169,43 @@ BEGIN
 END;//
 DELIMITER ;
 
+-- TRIGGER PARA COMPATIBILIDADE DE HORARIOS
 
+DELIMITER //
+CREATE TRIGGER check_docente_disponibilidade BEFORE INSERT ON Turma
+FOR EACH ROW
+BEGIN
+    DECLARE dia_atual VARCHAR(255);
+    DECLARE fim INT DEFAULT FALSE;
+    DECLARE cursor_dias CURSOR FOR 
+        SELECT TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(NEW.Dias_Aula, ',', numbers.n), ',', -1)) 
+        FROM 
+            (SELECT ROW_NUMBER() OVER () as n
+             FROM information_schema.columns) numbers
+        WHERE 
+            n <= CHAR_LENGTH(NEW.Dias_Aula) - CHAR_LENGTH(REPLACE(NEW.Dias_Aula, ',', '')) + 1;
+
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET fim = TRUE;
+
+    OPEN cursor_dias;
+
+    loop_dias: LOOP
+        FETCH cursor_dias INTO dia_atual;
+        IF fim THEN
+            LEAVE loop_dias;
+        END IF;
+
+        IF (SELECT COUNT(*) 
+            FROM Dias_Aula_Docente 
+            WHERE ID_Docente = NEW.ID_Docente 
+              AND FIND_IN_SET(dia_atual, Dias_Aula) 
+              AND FIND_IN_SET(NEW.Horario_Aulas, Horarios_Aula)) = 0 THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Docente não disponível no dia.';
+            LEAVE loop_dias;
+        END IF;
+    END LOOP;
+
+    CLOSE cursor_dias;
+END;
+//
+DELIMITER ;
