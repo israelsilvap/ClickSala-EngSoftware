@@ -32,13 +32,17 @@ class ModelTurma(BaseModel):
 
 @app.post('/inserirLocal')
 def inserirLocal(inputs:ModelLocal) -> str:
-    bd.inserirLocal(inputs.Nome, inputs.Capacidade)
-    return "Sala adicionada com sucesso!"
+    if bd.inserirLocal(inputs.Nome, inputs.Capacidade):
+        return "Sala adicionada com sucesso!"
+    else:
+        return "Erro"
 
 @app.post('/inserirDocente')
 def inserirDocente(inputs:ModelDocente) -> str:
-    bd.inserirDocente(inputs.Nome_Docente, inputs.dias, inputs.horarios)
-    return "Docente adicionado com sucesso!"
+    if bd.inserirDocente(inputs.Nome_Docente, inputs.dias, inputs.horarios):
+        return "Docente adicionado com sucesso!"
+    else:
+        "Erro"
 
 @app.post('/inserirDisciplina')
 def inserirDisciplina(inputs:ModelDisciplina) -> str:
