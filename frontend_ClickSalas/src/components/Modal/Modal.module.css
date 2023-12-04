@@ -49,7 +49,7 @@ body.activeModal {
   line-height: 1.4;
   background: var(--white);
   border-radius: 3px;
-  max-width: 600px;
+  max-width: 650px;
   min-width: 300px;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
