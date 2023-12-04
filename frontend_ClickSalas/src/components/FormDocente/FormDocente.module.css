@@ -38,3 +38,17 @@ button:hover {
 
   transition: all 0.5s ease;
 }
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) and (max-width: 1920px) and (max-height: 1080px) {
+  form {
+    font-size: 1.4rem;
+    margin: auto;
+    padding: 3.2rem;
+  }
+
+  button {
+    padding: 10px 20px;
+
+    font-size: 1.4rem;
+  }
+}

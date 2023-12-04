@@ -109,3 +109,122 @@
   transform: scale(1.1);
   z-index: 1;
 }
+
+/* Estilos adicionais para telas com resolução exata de 1920x1080 pixels */
+/* Estes estilos serão aplicados apenas em telas com resolução exata de 1920x1080 pixels */
+@media screen and (min-width: 1920px) and (min-height: 1080px) and (max-width: 1920px) and (max-height: 1080px) {
+  .sidebar {
+    background: var(--blue-500);
+    height: 65rem;
+    width: 25rem;
+    margin-left: 1rem;
+    border-radius: 15px;
+    margin-top: 1rem;
+    box-shadow: 2px 2px 16px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.2rem;
+    border-bottom: 1px solid var(--gray-400);
+    margin-bottom: 3.5rem;
+  }
+
+  .logo img {
+    height: 8rem;
+  }
+
+  .home {
+    padding: 0rem 3.5rem 2rem;
+  }
+
+  .home img {
+    height: 2.4rem;
+  }
+
+  .home a {
+    background: var(--white);
+    color: var(--blue-500);
+    border-radius: 8px;
+    height: 4.125rem;
+    padding: 0 0.5rem;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 16px 10px rgba(0, 0, 0, 0.1);
+
+    gap: 0.5rem;
+
+    transition: all 0.5s ease;
+  }
+
+  .home a:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+
+  .home p {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  .ufc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 3rem 0rem;
+  }
+
+  .ufc img {
+    height: 4rem;
+    margin-top: 16rem;
+  }
+
+  .sidebar footer {
+    margin-top: 1.5rem;
+    padding: 1.5rem 5rem 2rem;
+  }
+
+  .sidebar footer img {
+    height: 1.8rem;
+  }
+
+  .sidebar footer a {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    height: 3rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: block;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    box-shadow: 2px 2px 16px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
+
+  .sidebar footer a:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+}

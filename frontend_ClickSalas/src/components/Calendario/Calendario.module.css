@@ -29,3 +29,30 @@ a {
 .iconCalendar {
   height: 1.5rem;
 }
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) and (max-width: 1920px) and (max-height: 1080px) {
+  .buttonCalendar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    margin-top: 1.4rem;
+    margin-right: -0.3rem;
+    padding: 0.5rem;
+    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: var(--blue-500);
+    transition: all 0.5s ease;
+  }
+
+  .buttonCalendar p {
+    color: var(--white);
+    padding: 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  .iconCalendar {
+    height: 1.8rem;
+  }
+}
