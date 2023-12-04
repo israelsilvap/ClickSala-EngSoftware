@@ -8,7 +8,7 @@ import { Calendario } from "./../components/Calendario/Calendario";
 
 import iconMeet from "./../assets/image 4.svg";
 import iconClass from "./../assets/image 2.svg";
-import iconGraph from "./../assets/graph 1.svg";
+import iconSala from "./../assets/localsala.svg";
 import iconBd from "./../assets/image 5.svg";
 
 export function Home() {
@@ -30,7 +30,7 @@ export function Home() {
         <div className={styles.container1}>
           <Card
             title="Alocação de Locais"
-            icon={iconMeet}
+            icon={iconSala}
             description="Crie, gerencie ou exclua locais com facilidade, monitorando todas as atividades"
           />
           <Card
@@ -40,7 +40,7 @@ export function Home() {
           />
           <Card
             title="Cronogramas"
-            icon={iconGraph}
+            icon={iconMeet}
             description="Confira os cronogramas que foram gerados este semestre"
           />
         </div>

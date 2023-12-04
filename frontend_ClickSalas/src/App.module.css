@@ -24,15 +24,6 @@ main {
   margin-right: 5.5rem;
 }
 
-.vetordiv {
-  padding: 0.4rem;
-  margin-top: 0.4rem;
-}
-
-.vetordiv img {
-  height: 37.1rem;
-}
-
 .areacoord {
   padding: 1rem;
   margin-left: 2rem;
@@ -106,21 +97,14 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-left: -3rem;
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  .wrapper {
-    grid-template-columns: 1fr;
-  }
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% / 3 - 150px);
+  width: calc(100% / 3 - 195px);
   height: 19rem;
   margin: 10px;
   padding: 20px;
@@ -134,4 +118,150 @@ main {
   width: 35%;
   height: auto;
   padding: 0.5rem;
+}
+
+.contentAlocacao {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btnAlocacao {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  margin: 10px;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  border: 0cap;
+  background: var(--blue-500);
+  transition: all 0.5s ease;
+  color: var(--white);
+  padding: 0.5rem;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+/* Estilos adicionais para telas com resolução exata de 1920x1080 pixels */
+/* Estes estilos serão aplicados apenas em telas com resolução exata de 1920x1080 pixels */
+@media screen and (min-width: 1920px) and (min-height: 1080px) and (max-width: 1920px) and (max-height: 1080px) {
+  main {
+    width: 100%;
+  }
+  .containerTop {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5.5rem;
+  }
+
+  .areacoord {
+    margin-left: 10rem;
+  }
+
+  .areacoord h1 {
+    font-family: "Nunito", sans-serif;
+    color: var(--gray-800);
+    font-weight: 400;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 8rem;
+    text-align: center;
+    width: 90%;
+    height: 30rem;
+  }
+
+  .container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 8rem;
+    text-align: center;
+    width: 90%;
+    height: 30rem;
+  }
+
+  .containerBd {
+    padding: 2rem;
+    margin-top: -0.5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .containerBd h1 {
+    font-size: 3rem;
+  }
+
+  .btnVoltar {
+    height: 4rem;
+    width: 10rem;
+  }
+
+  .btnVoltar p {
+    font-size: 1.6rem;
+    padding: 0.5rem;
+  }
+
+  .iconVoltar {
+    height: 1.5rem;
+    margin: 5px;
+  }
+
+  .containerBd2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    height: 30rem;
+    margin-top: 10rem;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 3 - 205px);
+    height: 95%;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: var(--white);
+    transition: all 0.5s ease;
+  }
+
+  .cardIcon {
+    height: 40%;
+    width: auto;
+    padding: 0.5rem;
+  }
+
+  .btnAlocacao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 4rem;
+    margin: 10px;
+    padding: 0.5rem;
+
+    font-size: 1.4rem;
+  }
+
+  .card h3 {
+    font-size: 1.6rem;
+  }
 }

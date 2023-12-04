@@ -1,8 +1,8 @@
 form {
-  max-width: 40rem;
+  max-width: 38rem;
   margin: auto;
   background-color: #f4f4f4;
-  padding: 3.2rem;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -13,6 +13,7 @@ label {
 }
 
 input {
+  margin: 5px;
   padding: 5px;
   box-sizing: border-box;
   margin-bottom: 15px;
@@ -37,39 +38,4 @@ button:hover {
   background-color: #007bff;
 
   transition: all 0.5s ease;
-}
-
-@media screen and (min-width: 1920px) and (min-height: 1080px) and (max-width: 1920px) and (max-height: 1080px) {
-  form {
-    font-size: 1.4rem;
-    margin: auto;
-    padding: 3.2rem;
-    width: 40rem;
-  }
-
-  button {
-    padding: 10px 20px;
-
-    font-size: 1.4rem;
-  }
-
-  label {
-    font-weight: bold;
-    padding: 5px;
-  }
-
-  input {
-    height: 2rem;
-    font-size: 1.2rem;
-  }
-
-  select {
-    height: 2rem;
-    font-size: 1.3rem;
-  }
-
-  select option {
-    font-size: 1rem;
-    height: 0.2rem;
-  }
 }
