@@ -15,10 +15,10 @@ export function FormDocente() {
 
   const diasDaSemana = ["segunda", "terca", "quarta", "quinta", "sexta"];
   const horariosDisponiveis = [
-    "8h-10h",
-    "10h-12h",
-    "13:30h-15:30h",
-    "15:30h-17:30h",
+    "08h00_10h00", 
+    "10h00_12h00",
+    "13h30_15h30",
+    "15h30_17h30",
   ];
 
   const handleInputChange = (e) => {
@@ -48,32 +48,46 @@ export function FormDocente() {
     });
   };
 
-  const enviarDadosParaBanco = async () => {
-    const dadosDoFormulario = {
-      nome,
-      dias,
-      horarios,
-    };
+  // Não mexer daqui pra cima
 
+  const enviarDadosParaBanco = async () => {
+    // Combina os horários selecionados em cada dia em uma única string, separados por vírgulas
+    const horariosAgrupados = Object.values(horarios).map(horario => horario.join(','));
+  
+    // Remove os horários vazios do array
+    const horariosValidos = horariosAgrupados.filter(horario => horario !== '');
+  
+    const dadosDoFormulario = {
+      Nome_Docente: nome,
+      dias,
+      horarios: horariosValidos,
+    };
+  
+    console.log('Dados a serem enviados para a API:', dadosDoFormulario);
+  
     try {
-      const response = await fetch("http://localhost:8000/adicionardocente", {
+      const response = await fetch("http://127.0.0.1:8000/inserirDocente", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(dadosDoFormulario),
       });
-
+  
       if (!response.ok) {
         throw new Error("Erro ao enviar dados para o servidor.");
       }
-
+  
       setMensagem("Dados enviados com sucesso!");
     } catch (error) {
       console.error("Erro ao enviar dados:", error.message);
       setMensagem("Erro ao enviar dados. Tente novamente mais tarde.");
     }
   };
+  
+  
+  
+  // Não mexer daqui pra baixo
 
   const handleSubmit = (e) => {
     e.preventDefault();

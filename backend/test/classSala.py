@@ -1,4 +1,4 @@
-from componentes.sala.agenda.classAgenda import Agenda
+from classAgenda import Agenda
 
 class Sala:
     def __init__(self, Nome, Capacidade):
@@ -29,21 +29,8 @@ class Sala:
                     self.dias[dia].horarios[horario] = turma.Nome
 
     def exibir_sala(self):
-        sala_dict = {
-            'Nome': self.Nome,
-            'Capacidade': self.Capacidade,
-            'Agenda': {}
-        }
+        print(f'Nome: {self.Nome}')
+        print(f'Capacidade: {self.Capacidade}')
         for dia, agenda in self.dias.items():
-            sala_dict['Agenda'][dia] = agenda.horarios
-        return sala_dict
-
-    def gravar_sala_em_arquivo(self, nome_arquivo):
-        with open(nome_arquivo, 'a') as f:
-            f.write('------------------\n')
-            f.write(f'Nome: {self.Nome}\n')
-            f.write(f'Capacidade: {self.Capacidade}\n')
-            for dia, agenda in self.dias.items():
-                f.write(f'\nAgenda para {dia}:\n')
-                # Supondo que `agenda.exibir_horarios()` retorna uma string
-                f.write(agenda.salvar_para_arquivo() + '\n')
+            print(f'\nAgenda para {dia}:')
+            agenda.exibir_horarios()
