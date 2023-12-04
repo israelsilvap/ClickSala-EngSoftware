@@ -1,5 +1,5 @@
 form {
-  max-width: 38rem;
+  max-width: 40rem;
   margin: auto;
   background-color: #f4f4f4;
   padding: 3.2rem;
@@ -44,11 +44,32 @@ button:hover {
     font-size: 1.4rem;
     margin: auto;
     padding: 3.2rem;
+    width: 40rem;
   }
 
   button {
     padding: 10px 20px;
 
     font-size: 1.4rem;
+  }
+
+  label {
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  input {
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+
+  select {
+    height: 2rem;
+    font-size: 1.3rem;
+  }
+
+  select option {
+    font-size: 1rem;
+    height: 0.2rem;
   }
 }
