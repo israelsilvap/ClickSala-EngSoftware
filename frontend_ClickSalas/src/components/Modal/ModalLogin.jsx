@@ -1,9 +1,8 @@
 import { useState } from "react";
 import styles from "./Modal.module.css";
 
-import { FormTurma } from "../FormTurma/FormTurma";
-
 import iconLogin from "./../../assets/login.png";
+import { LoginForm } from "../LoginForm/LoginForm";
 
 export function ModalLogin() {
   const [modal, setModal] = useState(false);
@@ -29,7 +28,7 @@ export function ModalLogin() {
         <div className={styles.modal}>
           <div onClick={toggleModal} className={styles.overlay}></div>
           <div className={styles.modalContent}>
-            <FormTurma />
+            <LoginForm />
             <button className={styles.closeModal} onClick={toggleModal}>
               Fechar
             </button>
