@@ -32,7 +32,7 @@ export function About() {
           description="It is a long established fact that a reader will be distracted a page when looking at its layout. "
         />
         <CardTeam
-          cargo="Analista de Dados"
+          cargo="Testador de Software"
           icon={icon3}
           title="Ozeas do Carmo"
           description="It is a long established fact that a reader will be distracted a page when looking at its layout. "
@@ -52,7 +52,7 @@ export function About() {
           description="It is a long established fact that a reader will be distracted a page when looking at its layout. "
         />
         <CardTeam
-          cargo="Arquiteto de Software"
+          cargo="Testador de Software"
           icon={icon4}
           title="Silvan Felipe"
           description="It is a long established fact that a reader will be distracted a page when looking at its layout. "

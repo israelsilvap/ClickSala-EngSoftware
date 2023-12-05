@@ -66,48 +66,17 @@
 
 .ufc img {
   height: 3rem;
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .sidebar footer {
   margin-top: 0.5rem;
-  padding: 1.5rem 5rem 2rem;
 }
 
-.sidebar footer img {
-  height: 1.8rem;
-}
-
-.sidebar footer a {
-  background: transparent;
-  color: var(--white);
-  border: 1px solid var(--white);
-  border-radius: 20px;
-  height: 2.7rem;
-  font-weight: bold;
-  display: block;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-
-  box-shadow: 2px 2px 16px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.5s ease;
-
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-}
-
-.sidebar footer a:hover {
-  transform: scale(1.1);
-  z-index: 1;
+footer p {
+  margin-top: 2rem;
+  color: white;
+  font-size: 0.6rem;
 }
 
 /* Estilos adicionais para telas com resolução exata de 1920x1080 pixels */
@@ -171,7 +140,6 @@
 
   .home p {
     font-size: 1.6rem;
-    font-weight: bold;
   }
 
   .ufc {
@@ -183,48 +151,12 @@
 
   .ufc img {
     height: 4rem;
-    margin-top: 16rem;
+    margin-top: 18rem;
   }
 
-  .sidebar footer {
-    margin-top: 1.5rem;
-    padding: 1.5rem 5rem 2rem;
-  }
-
-  .sidebar footer img {
-    height: 1.8rem;
-  }
-
-  .sidebar footer a {
-    background: transparent;
-    color: var(--white);
-    border: 1px solid var(--white);
-    border-radius: 20px;
-    height: 3rem;
-    font-weight: bold;
-    font-size: 1.3rem;
-    display: block;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-
-    box-shadow: 2px 2px 16px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s ease;
-
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-  }
-
-  .sidebar footer a:hover {
-    transform: scale(1.1);
-    z-index: 1;
+  footer p {
+    margin-top: 5rem;
+    color: white;
+    font-size: 0.9rem;
   }
 }

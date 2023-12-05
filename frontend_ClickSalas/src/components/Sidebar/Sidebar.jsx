@@ -37,10 +37,7 @@ export function Sidebar() {
         <img src={imgUfc} alt="imgUfc" />
       </div>
       <footer>
-        <Link to="/">
-          <img src={iconLogout} alt="Logout" />
-          Logout
-        </Link>
+        <p>Todos os Direitos Reservados ©</p>
       </footer>
     </aside>
   );
