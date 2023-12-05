@@ -55,6 +55,8 @@ export function FormDocente() {
       horarios,
     };
 
+    console.log("Dados a serem enviados para a API:", dadosDoFormulario);
+
     try {
       const response = await fetch("http://localhost:8000/adicionardocente", {
         method: "POST",

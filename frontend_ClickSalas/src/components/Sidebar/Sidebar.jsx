@@ -22,13 +22,13 @@ export function Sidebar() {
         </Link>
       </div>
       <div className={styles.home}>
-        <Link to="/">
+        <Link to="/about">
           <img src={logoTeam} alt="Logoteam" />
           <p>Quem somos</p>
         </Link>
       </div>
       <div className={styles.home}>
-        <Link to="/">
+        <Link to="/campus">
           <img src={logoCampus} alt="Logocampus" />
           <p>Nosso Campus</p>
         </Link>
