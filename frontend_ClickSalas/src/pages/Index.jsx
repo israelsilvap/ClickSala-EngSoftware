@@ -6,7 +6,7 @@ import { TabelaIndex } from "../components/TabelaIndex/TabelaIndex";
 
 import { Link } from "react-router-dom";
 
-import iconLogin from "./../assets/login.png";
+import { ModalLogin } from "../components/Modal/ModalLogin";
 
 export function Index() {
   return (
@@ -24,12 +24,8 @@ export function Index() {
               plataforma
             </p>
           </div>
-          <div className={styles.divLogout}>
-            <Link to="/">
-              <img src={iconLogin} alt="Login" />
-              Login
-            </Link>
-          </div>
+
+          <ModalLogin />
         </div>
         <div className={styles.containerTable}>
           <TabelaIndex />

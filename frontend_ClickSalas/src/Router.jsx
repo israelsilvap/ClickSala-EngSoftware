@@ -9,8 +9,8 @@ import { Index } from "./pages/Index";
 export function Router() {
   return (
     <Routes>
-      <Route path="/index" element={<Index />} />
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Index />} />
+      <Route path="/home" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/bdpage" element={<BdPage />} />
       <Route path="/campus" element={<Campus />} />

@@ -16,7 +16,7 @@ export function Sidebar() {
         <img src={logoClick} alt="Logotipo" />
       </div>
       <div className={styles.home}>
-        <Link to="/">
+        <Link to="/home">
           <img src={logoHome} alt="Logohome" />
           <p>Página Inicial</p>
         </Link>

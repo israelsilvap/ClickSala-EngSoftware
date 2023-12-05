@@ -26,7 +26,7 @@ export function Home() {
             <h1>Área do Coordenador</h1>
           </div>
           <div className={styles.divLogout}>
-            <Link to="/index">
+            <Link to="/">
               <img src={iconLogout} alt="Logout" />
               Logout
             </Link>

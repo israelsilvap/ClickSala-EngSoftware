@@ -21,7 +21,7 @@ export function BdPage() {
         <div className={styles.containerTop}>
           <div className={styles.containerBd}>
             <h1>Banco de Dados</h1>
-            <Link to="/">
+            <Link to="/home">
               <div className={styles.btnVoltar}>
                 <img
                   src={iconVoltar}
@@ -38,7 +38,7 @@ export function BdPage() {
             <img src={iconDocente} alt="Icon" className={styles.cardIcon} />
             <h3>Docentes</h3>
             <Modal />
-            <Link to="/">
+            <Link to="">
               <button className={styles.btnAlocacao}>Listar Docentes</button>
             </Link>
           </div>
@@ -47,7 +47,7 @@ export function BdPage() {
             <h3>Disciplinas</h3>
 
             <Modal2 />
-            <Link to="/">
+            <Link to="">
               <button className={styles.btnAlocacao}>Listar Disciplinas</button>
             </Link>
           </div>
@@ -56,7 +56,7 @@ export function BdPage() {
             <h3>Locais</h3>
 
             <Modal3 />
-            <Link to="/">
+            <Link to="">
               <button className={styles.btnAlocacao}>Listar Locais</button>
             </Link>
           </div>
@@ -65,13 +65,13 @@ export function BdPage() {
             <h3>Turmas</h3>
 
             <Modal4 />
-            <Link to="/">
+            <Link to="">
               <button className={styles.btnAlocacao}>Listar Turmas</button>
             </Link>
           </div>
         </div>
         <div className={styles.contentAlocacao}>
-          <Link to="/">
+          <Link to="">
             <button className={styles.btnAlocacao}>Fazer Alocação</button>
           </Link>
         </div>
