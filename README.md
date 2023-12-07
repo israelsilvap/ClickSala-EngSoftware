@@ -10,10 +10,10 @@
 
 ## Tecnologias
 
-<img src="./frontend_ClickSalas/src/assets/react-original.svg" style="height:2.6rem;" />
-<img src="./frontend_ClickSalas/src/assets/mysql (1).png" style="height:2.6rem; margin-left:10px;" />
-<img src="./frontend_ClickSalas/src/assets/python.png" style="height:2.6rem; margin-left:10px;" />
-<img src="./frontend_ClickSalas/src/assets/logo-teal.png" style="height:2.6rem;" />
+<img src="./frontend_ClickSalas/src/assets/react-original.svg" style="height:2rem;" />
+<img src="./frontend_ClickSalas/src/assets/mysql (1).png" style="height:2rem; margin-left:10px;" />
+<img src="./frontend_ClickSalas/src/assets/python.png" style="height:2rem; margin-left:10px;" />
+<img src="./frontend_ClickSalas/src/assets/logo-teal.png" style="height:2rem;" />
 
 ## Como utilizar
 
