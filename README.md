@@ -1,7 +1,7 @@
 <h1 align="center">  
     <img src="./frontend_ClickSalas/src/assets/logo.svg" style="height:2.6rem;" />
     <img src="./frontend_ClickSalas/src/assets/Click Salas.png" /><br>
-    <p style="font-size:1.3rem; margin-top:1rem; font-weight:normal;">Sistema de Gerenciamento e Alocação de Salas</p>
+    <p style="font-size:1rem; margin-top:1rem; font-weight:normal;">Sistema de Gerenciamento e Alocação de Salas</p>
 </h1>
 
 ## Sobre
@@ -10,10 +10,12 @@
 
 ## Tecnologias
 
-<img src="./frontend_ClickSalas/src/assets/react-original.svg" style="height:2rem;" />
-<img src="./frontend_ClickSalas/src/assets/mysql (1).png" style="height:2rem; margin-left:10px;" />
-<img src="./frontend_ClickSalas/src/assets/python.png" style="height:2rem; margin-left:10px;" />
-<img src="./frontend_ClickSalas/src/assets/logo-teal.png" style="height:2rem;" />
+<div style="display:flex; flex-direction: row;">
+    <img src="./frontend_ClickSalas/src/assets/react-original.svg" style="height:2rem;" />
+    <img src="./frontend_ClickSalas/src/assets/mysql (1).png" style="height:2rem; margin-left:10px;" />
+    <img src="./frontend_ClickSalas/src/assets/python.png" style="height:2rem; margin-left:10px;" />
+    <img src="./frontend_ClickSalas/src/assets/logo-teal.png" style="height:2rem;" />
+</div>
 
 ## Como utilizar
 
