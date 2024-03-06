@@ -33,3 +33,7 @@
     # Instale as dependências
     $ npm install
 ```
+
+## Telas
+Visão Geral de todos os usuários
+<img src="./frontend_ClickSalas/src/assets/print2.jpeg" style="height:2rem;" />
