@@ -35,5 +35,7 @@
 ```
 
 ## Telas
-Visão Geral de todos os usuários <br>
-<img src="./frontend_ClickSalas/src/assets/print2.jpeg" style="height:12rem;" />
+## Visão Geral de todos os usuários 
+<img src="./frontend_ClickSalas/src/assets/print2.jpeg" style="height:22rem;" /> 
+## Visão do usuário coordenador
+<img src="./frontend_ClickSalas/src/assets/print1.jpeg" style="height:22rem;" />
