@@ -1,3 +1,4 @@
+#Pasta ignoradas
 .venv/
 
 node_modules
