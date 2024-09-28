@@ -68,6 +68,46 @@ body.activeModal {
   padding: 5px 7px;
 }
 
+.divLogout {
+  background: var(--blue-500);
+  border-radius: 20px;
+  height: 2.7rem;
+  width: 6rem;
+  margin-top: 1rem;
+  display: block;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  box-shadow: 2px 2px 16px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.divLogout a {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.divLogout img {
+  height: 1.3rem;
+}
+
+.divLogout:hover {
+  background: var(--blue-500);
+}
+
 @media screen and (min-width: 1920px) and (min-height: 1080px) and (max-width: 1920px) and (max-height: 1080px) {
   .btnModal {
     display: flex;

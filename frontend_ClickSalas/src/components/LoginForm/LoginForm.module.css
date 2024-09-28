@@ -1,0 +1,26 @@
+/* styles.css */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input {
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+}

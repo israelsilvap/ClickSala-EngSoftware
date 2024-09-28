@@ -4,12 +4,14 @@ import styles from "./../App.module.css";
 import { Sidebar } from "./../components/Sidebar/Sidebar";
 import { Card } from "./../components/Card/Card";
 import { CardAtividades } from "./../components/CardAtividades/CardAtividades";
-import { Calendario } from "./../components/Calendario/Calendario";
+
+import { Link } from "react-router-dom";
 
 import iconMeet from "./../assets/image 4.svg";
 import iconClass from "./../assets/image 2.svg";
 import iconSala from "./../assets/localsala.svg";
 import iconBd from "./../assets/image 5.svg";
+import iconLogout from "./../assets/icon-logout.svg";
 
 export function Home() {
   return (
@@ -23,8 +25,11 @@ export function Home() {
           <div className={styles.areacoord}>
             <h1>Área do Coordenador</h1>
           </div>
-          <div>
-            <Calendario />
+          <div className={styles.divLogout}>
+            <Link to="/">
+              <img src={iconLogout} alt="Logout" />
+              Logout
+            </Link>
           </div>
         </div>
         <div className={styles.container1}>

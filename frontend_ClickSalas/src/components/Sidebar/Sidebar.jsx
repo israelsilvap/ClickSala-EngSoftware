@@ -16,19 +16,19 @@ export function Sidebar() {
         <img src={logoClick} alt="Logotipo" />
       </div>
       <div className={styles.home}>
-        <Link to="/">
+        <Link to="/home">
           <img src={logoHome} alt="Logohome" />
           <p>Página Inicial</p>
         </Link>
       </div>
       <div className={styles.home}>
-        <Link to="/">
+        <Link to="/about">
           <img src={logoTeam} alt="Logoteam" />
           <p>Quem somos</p>
         </Link>
       </div>
       <div className={styles.home}>
-        <Link to="/">
+        <Link to="/campus">
           <img src={logoCampus} alt="Logocampus" />
           <p>Nosso Campus</p>
         </Link>
@@ -37,10 +37,7 @@ export function Sidebar() {
         <img src={imgUfc} alt="imgUfc" />
       </div>
       <footer>
-        <Link to="/">
-          <img src={iconLogout} alt="Logout" />
-          Logout
-        </Link>
+        <p>Todos os Direitos Reservados ©</p>
       </footer>
     </aside>
   );

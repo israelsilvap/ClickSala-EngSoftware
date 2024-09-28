@@ -1,0 +1,41 @@
+/* Estilo para as tabelas */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+  background: white;
+}
+
+/* Estilo para as células da tabela */
+th,
+td {
+  border: 2px solid var(--blue-500);
+  padding: 10px;
+  text-align: center;
+  min-width: 150px; /* Defina o tamanho mínimo para todas as células */
+}
+
+/* Estilo para as divs contendo as tabelas */
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Estilo para a div que contém as Salas 01 até 05 */
+.container div {
+  flex: 1;
+  margin-right: 20px;
+}
+
+/* Estilo para a div que contém as Salas 06 até 10 */
+.container div:last-child {
+  margin-right: 0;
+}
+
+/* Limpar flutuação */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

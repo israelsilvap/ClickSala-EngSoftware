@@ -66,17 +66,13 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   width: 8rem;
   margin: 5px;
-  padding: 0.5rem;
   box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-  border: 0cap;
   background: var(--blue-500);
   transition: all 0.5s ease;
   color: var(--white);
-  padding: 0.5rem;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
@@ -87,10 +83,14 @@ main {
   transform: scale(1.1);
   z-index: 1;
 }
+.btnVoltar2:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
 
 .iconVoltar {
   height: 1rem;
-  margin: 5px;
+  margin-top: 0.7rem;
 }
 
 .containerBd2 {
@@ -146,6 +146,126 @@ main {
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
+}
+
+.mainTeam {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainTeam h1 {
+  color: var(--blue-500);
+}
+
+.mainTeam h1,
+p {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.containerTeam1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.containerTeam2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btnVoltar2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 8rem;
+  margin: 5px;
+  box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  background: var(--blue-500);
+  transition: all 0.5s ease;
+  color: var(--white);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.divVoltar {
+  display: flex;
+  justify-content: center;
+}
+
+.iconVoltar2 {
+  margin-top: 0.4rem;
+  height: 1.3rem;
+}
+
+.iconCamp {
+  height: 18rem;
+  width: 28rem;
+  border-radius: 4rem 2rem 4rem 2rem;
+  padding: 1rem;
+  -webkit-border-radius: 4rem 2rem 4rem 2rem;
+  -moz-border-radius: 4rem 2rem 4rem 2rem;
+  -ms-border-radius: 4rem 2rem 4rem 2rem;
+  -o-border-radius: 4rem 2rem 4rem 2rem;
+}
+
+.containerCamp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.divLogout {
+  background: var(--blue-500);
+  border-radius: 20px;
+  height: 2.7rem;
+  width: 6rem;
+  margin-top: 1rem;
+  display: block;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  box-shadow: 2px 2px 16px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.divLogout a {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.divLogout img {
+  height: 1.3rem;
+  padding-right: 0.2rem;
+}
+
+.divLogout:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.containerTable {
+  margin-top: -0.5rem;
+  padding-left: 3.5rem;
 }
 
 /* Estilos adicionais para telas com resolução exata de 1920x1080 pixels */
@@ -205,8 +325,10 @@ main {
   }
 
   .btnVoltar {
-    height: 4rem;
-    width: 10rem;
+    height: 3.5rem;
+    width: 8rem;
+    margin-top: -0.3rem;
+    margin-right: -3.8rem;
   }
 
   .btnVoltar p {
@@ -215,8 +337,9 @@ main {
   }
 
   .iconVoltar {
-    height: 1.5rem;
-    margin: 5px;
+    height: 1.6rem;
+    padding-right: 0.2rem;
+    margin-top: 0.7rem;
   }
 
   .containerBd2 {
@@ -263,5 +386,74 @@ main {
 
   .card h3 {
     font-size: 1.6rem;
+  }
+
+  .mainTeam h1 {
+    font-size: 3rem;
+  }
+
+  .mainTeam p {
+    font-size: 1.5rem;
+  }
+
+  .containerTeam1 {
+    height: 25rem;
+  }
+
+  .containerTeam2 {
+    height: 25rem;
+  }
+
+  .btnVoltar2 {
+    height: 3.5rem;
+    width: 13rem;
+  }
+
+  .btnVoltar2 p {
+    font-size: 1.5rem;
+  }
+
+  .iconVoltar2 {
+    height: 1.5rem;
+    margin-top: 0.7rem;
+  }
+
+  .divLogout {
+    background: var(--blue-500);
+    border-radius: 20px;
+    height: 3.5rem;
+    width: 8rem;
+    margin-top: 1rem;
+    display: block;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    box-shadow: 2px 2px 16px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
+
+  .divLogout a {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+  }
+
+  .divLogout img {
+    height: 1.6rem;
+    padding-right: 0.4rem;
+    margin-top: 0.2rem;
   }
 }
